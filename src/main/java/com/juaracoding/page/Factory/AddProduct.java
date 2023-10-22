@@ -41,8 +41,8 @@ public class AddProduct {
 
     public void findProduct(String productName){
         searchBtn.click();
-        searchInput.sendKeys(productName);
-        searchInput.sendKeys(Keys.ENTER);
+        searchInput.sendKeys(productName, Keys.ENTER);
+//        searchInput.sendKeys(Keys.ENTER);
     }
 
     public void addToCart1(){

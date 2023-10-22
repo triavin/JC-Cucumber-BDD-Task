@@ -20,11 +20,11 @@ public class AddProductTestPageFactory {
         addProduct = new AddProduct();
     }
 
-    @AfterClass
-    public void finish(){
-        DriverSingleton.delay(Constants.SORTDELAY);
-        DriverSingleton.closeObjectInstance();
-    }
+//    @AfterClass
+//    public void finish(){
+//        DriverSingleton.delay(Constants.SORTDELAY);
+//        DriverSingleton.closeObjectInstance();
+//    }
 
     @Test(priority = 1)
     public void addProduct1(){
