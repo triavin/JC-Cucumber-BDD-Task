@@ -11,6 +11,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.sql.Driver;
+
 public class CheckoutTestPageFactory {
     public WebDriver driver;
     public CheckoutProduct checkoutProduct;
@@ -76,6 +78,7 @@ public class CheckoutTestPageFactory {
                 Constants.PHONE
         );
         Assert.assertNotNull(checkoutProduct.getTxtValid());
+        DriverSingleton.delay(2);
         System.out.println(checkoutProduct.getTxtValid());
     }
 }
