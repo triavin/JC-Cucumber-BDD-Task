@@ -52,19 +52,14 @@ public class DriverSingleton {
         return jse;
     }
 
-    public static int getWindowHeight(){
-        return windowWidth;
-    }
 
-    public static int getWindowsWidth(){
-        return windowHeight;
-    }
-
+    // method for close driver
     public static void closeObjectInstance(){
         instance = null;
         driver.quit();
     }
 
+    // method delay
     public static void delay(long detik){
         // add delay to automation
         try{
@@ -72,5 +67,24 @@ public class DriverSingleton {
         } catch (InterruptedException e){
             throw new RuntimeException(e);
         }
+    }
+
+
+    //scroll web page to find login form
+    public static void findLoginForm(){
+        System.out.println(windowHeight);
+
+        if (windowHeight > 1382){
+            jse.executeScript("window.scrollBy(0,500)");
+            System.out.println("Scroll Down page by 500px");
+        } else {
+            jse.executeScript("window.scrollBy(0,600)");
+            System.out.println("Scroll Down page by 600px");
+        }
+
+    }
+    //scroll web page
+    public static void scrollDown(String pixel){
+            jse.executeScript("window.scrollBy(0," + pixel + ")");
     }
 }
