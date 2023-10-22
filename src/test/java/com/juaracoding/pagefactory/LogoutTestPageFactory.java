@@ -1,4 +1,4 @@
-package com.juaracoding;
+package com.juaracoding.pagefactory;
 
 import com.juaracoding.driver.DriverSingleton;
 import com.juaracoding.page.Factory.Login;

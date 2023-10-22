@@ -1,4 +1,4 @@
-package com.juaracoding;
+package com.juaracoding.pagefactory;
 
 import com.juaracoding.driver.DriverSingleton;
 import com.juaracoding.page.Factory.Login;
@@ -43,7 +43,7 @@ public class LoginTestPageFactory {
         DriverSingleton.findLoginForm();
         login.login("", Constants.PASSWORD);
         DriverSingleton.delay(Constants.SORTDELAY);
-        Assert.assertNotNull(login.getUserRequired());
+        Assert.assertNotNull(login.getInvalid());
         System.out.println("Test case invalid Login ! User required");
     }
 
@@ -53,7 +53,7 @@ public class LoginTestPageFactory {
         DriverSingleton.findLoginForm();
         login.login(Constants.USERNAME, "");
         DriverSingleton.delay(Constants.SORTDELAY);
-        Assert.assertNotNull(login.getPassRequired());
+        Assert.assertNotNull(login.getInvalid());
         System.out.println("Test case invalid Login ! Password required");
     }
 

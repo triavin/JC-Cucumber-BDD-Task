@@ -1,17 +1,12 @@
-package com.juaracoding;
+package com.juaracoding.pagefactory;
 
 import com.juaracoding.driver.DriverSingleton;
-import com.juaracoding.page.Factory.AddProduct;
 import com.juaracoding.page.Factory.CheckoutProduct;
 import com.juaracoding.utils.Constants;
-import io.cucumber.java.BeforeAll;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import java.sql.Driver;
 
 public class CheckoutTestPageFactory {
     public WebDriver driver;
@@ -77,8 +72,8 @@ public class CheckoutTestPageFactory {
                 Constants.POSTCODE,
                 Constants.PHONE
         );
-        Assert.assertNotNull(checkoutProduct.getTxtValid());
+        Assert.assertNotNull(checkoutProduct.getElementValid());
         DriverSingleton.delay(2);
-        System.out.println(checkoutProduct.getTxtValid());
+        System.out.println(checkoutProduct.getElementValid());
     }
 }
