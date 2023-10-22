@@ -5,4 +5,5 @@ public class LoginElement {
     public static final String PASSWORDXPATH = "//input[@id='password']";
     public static final String LOGINBTNXPATH = "button[value='Log in']"; //ccs selector
     public static final String INVALIDTXT = "//ul[@class='woocommerce-error']";
+    public static final String VALIDTXT = "//p[contains(text(),'Hello')]";
 }

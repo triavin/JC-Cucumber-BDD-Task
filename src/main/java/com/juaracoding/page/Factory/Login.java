@@ -19,6 +19,8 @@ public class Login {
     private WebElement loginBtn;
     @FindBy(xpath = LoginElement.INVALIDTXT)
     private WebElement txtInvalid;
+    @FindBy(xpath = LoginElement.VALIDTXT)
+    private WebElement txtValid;
 
     // constructor Login
     public Login(){
@@ -33,18 +35,26 @@ public class Login {
         this.password.sendKeys(password);
         loginBtn.click();
     }
+    public void inputUsername(String username){
+        DriverSingleton.findLoginForm();
+        this.username.sendKeys(username);
+    }
+    public void inputPassword(String password){
+        DriverSingleton.findLoginForm();
+        this.password.sendKeys(password);
+    }
+    public void clickBtnLogin(){
+        DriverSingleton.findLoginForm();
+        loginBtn.click();
+    }
 
-    public String getUserRequired(){
-        System.out.println(txtInvalid.getText());
-        return txtInvalid.getText();
-    }
-    public String getPassRequired(){
-        System.out.println(txtInvalid.getText());
-        return txtInvalid.getText();
-    }
     public String getInvalid(){
         System.out.println(txtInvalid.getText());
         return txtInvalid.getText();
+    }
+    public String getValid(){
+        System.out.println(txtValid.getText());
+        return txtValid.getText();
     }
 
 }

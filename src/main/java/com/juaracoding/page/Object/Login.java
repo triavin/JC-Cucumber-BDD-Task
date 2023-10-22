@@ -25,7 +25,7 @@ public class Login {
     }
 
     public String getAlert(){
-        System.out.println(txtInvalid.getText());
+        System.out.println(driver.findElement(By.xpath(LoginElement.INVALIDTXT)).getText());
         return driver.findElement(By.xpath(LoginElement.INVALIDTXT)).getText();
     }
 

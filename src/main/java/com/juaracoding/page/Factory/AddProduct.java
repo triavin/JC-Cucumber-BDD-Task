@@ -64,6 +64,27 @@ public class AddProduct {
         addCartBtn.click();
     }
 
+    public void clickProduct(){
+        targetProduct1.click();
+    }
+    public void chooseColor(int index){
+        selectColor = new Select(color);
+        selectColor.selectByIndex(index);
+
+        // select color use index base cause
+        // not all product have same color parameter
+        // it can cause errors in the test
+        // because no elements / parameter are found
+    }
+    public void chooseSize(String size){
+        selectSize = new Select(this.size);
+        selectColor.selectByValue(size);
+
+        // select size use value base because
+        // it's easy to choose different size by value
+        // because size option usually doesn't have much option
+    }
+
     public String getValidation(){
         return txtAlert.getText();
     }

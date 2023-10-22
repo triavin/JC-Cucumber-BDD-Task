@@ -1,7 +1,6 @@
 package com.juaracoding.page.Factory;
 
 import com.juaracoding.driver.DriverSingleton;
-import com.juaracoding.utils.AddProductElement;
 import com.juaracoding.utils.CheckoutElement;
 import com.juaracoding.utils.Constants;
 import org.openqa.selenium.Keys;
@@ -99,7 +98,54 @@ public class CheckoutProduct {
         return txtError.getText();
     }
 
-    public WebElement getTxtValid() {
+    public WebElement getElementValid() {
         return txtValid;
     }
+    public String getTxtValid() {
+        return txtValid.getText();
+    }
+
+    public void clickProceedButton(){
+        proceedBtn.click();
+    }
+    public void inputFirstName(String firstname){
+        this.firstName.clear();
+        this.firstName.sendKeys(firstname);
+    }
+    public void inputLastName(String lastname){
+        this.lastName.clear();
+        this.lastName.sendKeys(lastname);
+    }
+    public void selectRegion(String region){
+        this.region.click();
+        this.comboBox.sendKeys(region,Keys.ENTER);
+    }
+    public void inputStreet(String street){
+        this.street.clear();
+        this.street.sendKeys(street);
+    }
+    public void inputTown(String town){
+        this.town.clear();
+        this.town.sendKeys(town);
+    }
+    public void selectProvince(String province){
+        this.province.click();
+        this.comboBox.sendKeys(province,Keys.ENTER);
+    }
+    public void inputPostcode(String postcode){
+        this.postCode.clear();
+        this.postCode.sendKeys(postcode);
+    }
+    public void inputPhoneNumber(String phonenumber){
+        this.phoneNumber.clear();
+        this.phoneNumber.sendKeys(phonenumber);
+    }
+    public void clickTerm(){
+        term.click();
+    }
+    public void clickOrderButton(){
+        orderBtn.click();
+    }
+
+
 }
